@@ -247,6 +247,3 @@ Uncomment the code below when you're ready to implement a Google Map!
   //Make sure the map bounds get updated on page resize
 //  map.fitBounds(mapBounds);
 //});
-var formattedName = HTMLheaderName.replace('%data%','Pikashi');
-var formattedRole = HTMLheaderRole.replace('%data%','Front-end Engineer');
-$('#header').append(formattedName).append(formattedRole);
