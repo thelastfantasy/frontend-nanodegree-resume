@@ -1,39 +1,64 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-//$('#main').append('pikashi');
-// var formattedName = HTMLheaderName.replace('%data%','Pikashi');
-// var formattedRole = HTMLheaderRole.replace('%data%','Front-end Engineer');
+
+
+var work = {
+    'jobs': [{
+        'employer': 'Mr. Zhang',
+        'title': 'JiuYing Company',
+        'dates': '1 year',
+        'location': 'Shanghai',
+        'description': 'an IT company'
+    }]
+}
+
+var projects = {
+    'projects': [{
+        'title': '',
+        'dates': '',
+        'description': '',
+        'images': []
+    }]
+};
+
 var bio = {
     'name': 'Tao Yulong',
     'role': 'Front-end Engineer',
-    'contacts':{
-        'mobile':'18616310150',
-        'email':'taoyulong@gmail.com',
-        'github':'thelastfantasy',
-        'twitter':'@pikashi',
-        'location':'Shanghai'
-    },
-    'pic': './images/me.jpg',
+    'biopic': './images/me.jpg',
     'welcomeMessage': 'Welcome! Here is my bio page.',
-    'skills': ['CSS','Javascript','jQuery']
+    'contacts': {
+        'mobile': '+86-18600000000',
+        'email': 'taoyulong@gmail.com',
+        'github': 'thelastfantasy',
+        'twitter': '@pikashi',
+        'location': 'Shanghai'
+    },
+    'skills': ['CSS', 'Javascript', 'jQuery']
 };
 
-var work = {}
-work.employer = 'Mr. Zhang';
-work.title = 'JiuYing Company';
-work.years = '1 year';
-work.location = 'Shanghai';
-work.description = 'an IT company';
-work.position = 'Web Developer';
+var education = {
+    'schools': [{
+        'name': 'Jinken College of Technology',
+        'dates': '3 years',
+        'location': 'Nanjing',
+        'degree': '',
+        'url': '',
+        'majors': [],
+    }],
+    'onlineCourses': [{
+        'title': '',
+        'school': '',
+        'dates': '',
+        'url': ''
+    }]
+}
 
-var education = {}
-education['name'] = 'Jinken College of Technology';
-education['years'] = '3 years';
-education['city'] = 'Nanjing';
-education['description'] = 'full-time college';
+//$('#main').append('pikashi');
+// var formattedName = HTMLheaderName.replace('%data%','Pikashi');
+// var formattedRole = HTMLheaderRole.replace('%data%','Front-end Engineer');
 
-var formattedName = HTMLheaderName.replace('%data%',bio.name);
+/* var formattedName = HTMLheaderName.replace('%data%',bio.name);
 var formattedRole = HTMLheaderRole.replace('%data%',bio.role);
 var formattedMobile = HTMLmobile.replace('%data%',bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace('%data%',bio.contacts.email);
@@ -54,7 +79,7 @@ $('#header')
     .prepend(formattedMobile)
     .prepend(formattedWelcomeMsg)
     .prepend(formattedRole)
-    .prepend(formattedName);
+    .prepend(formattedName); */
 
 /* $('#main')
     .append(work['position'])
