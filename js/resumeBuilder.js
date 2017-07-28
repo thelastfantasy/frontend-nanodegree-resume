@@ -18,6 +18,21 @@ var bio = {
     'welcomeMessage': 'Welcome! Here is my bio page.',
     'skills': ['CSS','Javascript','jQuery']
 };
+
+var work = {}
+work.employer = 'Mr. Zhang';
+work.title = 'JiuYing Company';
+work.years = '1 year';
+work.location = 'Shanghai';
+work.description = 'an IT company';
+work.position = 'Web Developer';
+
+var education = {}
+education['name'] = 'Jinken College of Technology';
+education['years'] = '3 years';
+education['city'] = 'Nanjing';
+education['description'] = 'full-time college';
+
 var formattedName = HTMLheaderName.replace('%data%',bio.name);
 var formattedRole = HTMLheaderRole.replace('%data%',bio.role);
 var formattedMobile = HTMLmobile.replace('%data%',bio.contacts.mobile);
@@ -40,3 +55,7 @@ $('#header')
     .prepend(formattedWelcomeMsg)
     .prepend(formattedRole)
     .prepend(formattedName);
+
+/* $('#main')
+    .append(work['position'])
+    .append(education.name); */
