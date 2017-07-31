@@ -67,7 +67,8 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: left;
+  /* float: left; */
+  display: inline-block;
 }
 
 .location-text {
@@ -76,7 +77,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -218,4 +218,13 @@ span {
   .biopic {
     display: block;
   }
+}
+
+.location-text {
+  float: none;
+  margin-left: 6px;
+  display: inline-block;
+}
+.location-text:before {
+  content:"in ";
 }

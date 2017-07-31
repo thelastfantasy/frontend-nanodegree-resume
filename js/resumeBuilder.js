@@ -17,21 +17,17 @@ var work = {
         'description': 'Work in this B2C company, the salary is not bad but the work is boring and repetity, I don\'t like it.'
     }],
     display: function () {
-        for (var job in work.jobs) {
+        for (var job = 0; job < work.jobs.length; job++) {
             $('#workExperience').append(HTMLworkStart);
 
             var formattedWorkEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
             var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
             var formatedEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
-            $('.work-entry:last').append(formatedEmployerTitle);
-
             var formattedWorkDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
-            $('.work-entry:last').append(formattedWorkDates);
             var formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
-            $('.work-entry:last').append(formattedWorkLocation);
-
             var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
-            $('.work-entry:last').append(formattedWorkDescription);
+            
+            $('.work-entry:last').append(formatedEmployerTitle, formattedWorkDates, formattedWorkLocation, formattedWorkDescription);
         }
     }
 }
@@ -103,14 +99,14 @@ var bio = {
         if (bio.skills.length > 0) {
             $("#header").append(HTMLskillsStart);
 
-            for (i in bio.skills) {
+            for (var i = 0; i < bio.skills.length; i++) {
                 $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
             }
         }
 
-        for (i in formattedContactInfo) {
-            $("#topContacts").append(formattedContactInfo[i]);
-            $("#footerContacts").append(formattedContactInfo[i]);
+        for (var j = 0; j < formattedContactInfo.length; j++) {
+            $("#topContacts").append(formattedContactInfo[j]);
+            $("#footerContacts").append(formattedContactInfo[j]);
         }
     }
 };
@@ -132,7 +128,7 @@ var education = {
     }],
     display: function () {
         if (education.schools.length > 0 || education.onlineCourses.length > 0) {
-            for (i in education.schools) {
+            for (var i = 0; i < education.schools.length; i++) {
                 $("#education").append(HTMLschoolStart);
 
                 var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools[i].url);
@@ -149,12 +145,12 @@ var education = {
 
             if (education.onlineCourses.length > 0) {
                 $("#education").append(HTMLonlineClasses);
-                for (i in education.onlineCourses) {
+                for (var j = 0; j < education.onlineCourses.length; j++) {
                     $("#education").append(HTMLschoolStart);
-                    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#", education.onlineCourses[i].url);
-                    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
-                    var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
-                    var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url).replace("#", education.onlineCourses[i].url);
+                    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[j].title).replace("#", education.onlineCourses[j].url);
+                    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[j].school);
+                    var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[j].dates);
+                    var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[j].url).replace("#", education.onlineCourses[j].url);
 
                     $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
                     $(".education-entry:last").append(formattedOnlineDates);
