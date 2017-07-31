@@ -55,7 +55,7 @@ var projects = {
     display: function () {
         for (var i = 0; i < projects.projects.length; i++) {
             $('#projects').append(HTMLprojectStart);
-            var projTitle = HTMLprojectTitle.replace("%data%", "<a href=\"" + projects.projects[i].link + "\" target=\"_bkank\">" + projects.projects[i].title + "</a>");
+            var projTitle = HTMLprojectTitle.replace("%data%", "<a href=\"" + projects.projects[i].link + "\" target=\"_blank\">" + projects.projects[i].title + "</a>");
             $('.project-entry:last').append(projTitle);
             var projDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
             $('.project-entry:last').append(projDates);
